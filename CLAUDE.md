@@ -9,6 +9,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run lint` — ESLint (flat config, JS/JSX only)
 - `npm run preview` — Preview production build
 
+### State & Data
+- Use React Context for shared state — no external state library
+- Do not fetch data directly in page components; use services in src/services/
+- All async service calls must use delay() to simulate latency
+- Persist user-specific data to localStorage using the established key pattern ({entity}_{userId})
+
 ## Architecture
 
 React 19 SPA using Vite 7, Tailwind CSS 4, and React Router 7. No TypeScript — plain JSX throughout.
